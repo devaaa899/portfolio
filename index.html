@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Deva Nanda</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+body { font-family:'Poppins',sans-serif; background:#0d0d0d; color:white; }
+
+.hero {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background: radial-gradient(circle at top, #1a1a1a, black);
+}
+
+.hero h1 { font-size:3.5rem; font-weight:700; }
+.hero p { opacity:0.8; }
+
+.hero-box {
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.hero-card {
+  background:#1a1a1a;
+  padding:15px 25px;
+  border-radius:10px;
+  font-size:0.9rem;
+  box-shadow:0 0 10px rgba(255,255,255,0.05);
+}
+
+.section-page {
+  display:none;
+  padding:80px 20px;
+  background: linear-gradient(180deg, #0d0d0d, #141414);
+}
+.active-section { display:block; }
+
+.nav-link { cursor:pointer; }
+
+.card {
+  background:#1f1f1f;
+  border-radius:15px;
+  padding:20px;
+  color:white;
+  box-shadow:0 0 15px rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+.card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 0 25px rgba(255,255,255,0.15);
+}
+
+.about-box {
+  background:#1a1a1a;
+  padding:25px;
+  border-radius:15px;
+  margin-top:20px;
+  transition:0.3s;
+}
+.about-box:hover {
+  border-left:3px solid white;
+}
+
+.skill-card {
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:15px;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.progress { height:8px; background:#333; }
+.progress-bar { background:white; }
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+<div class="container">
+<a class="navbar-brand" onclick="showSection('home')">Portfolio</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" onclick="showSection('about')"><i class="bi bi-person"></i> About</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showSection('projects')"><i class="bi bi-folder"></i> Projects</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showSection('skills')"><i class="bi bi-bar-chart"></i> Skills</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showSection('resume')"><i class="bi bi-file-text"></i> Resume</a></li>
+<li class="nav-item"><a class="nav-link" onclick="showSection('contact')"><i class="bi bi-envelope"></i> Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section-page active-section">
+<div class="hero">
+<div>
+<h1>Deva Nanda S</h1>
+<p>BCA (AI) Student • Web Developer</p>
+
+<div class="hero-box">
+<div class="hero-card"><i class="bi bi-code"></i> MERN Stack</div>
+<div class="hero-card"><i class="bi bi-cpu"></i> AI & Data</div>
+<div class="hero-card"><i class="bi bi-layers"></i> Full Stack Projects</div>
+<div class="hero-card"><i class="bi bi-lightbulb"></i> Problem Solving</div>
+</div>
+
+<button class="btn btn-outline-light mt-4" onclick="showSection('projects')">
+<i class="bi bi-folder"></i> Explore Projects
+</button>
+
+<a href="resume.pdf" download class="btn btn-outline-light mt-4 ms-2">
+<i class="bi bi-download"></i> Download Resume
+</a>
+
+</div>
+</div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section-page">
+<div class="container">
+<h2 class="text-center"><i class="bi bi-person-circle"></i> About Me</h2>
+
+<div class="row mt-4">
+<div class="col-md-6">
+<div class="about-box">
+<h5><i class="bi bi-person"></i> Profile</h5>
+<p>
+BCA student specializing in Artificial Intelligence with strong interest in full-stack web development and real-world problem solving.
+</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="about-box">
+<h5><i class="bi bi-gear"></i> Technical Stack</h5>
+<p><i class="bi bi-code-slash"></i> HTML, CSS, JavaScript, Bootstrap</p>
+<p><i class="bi bi-server"></i> Node.js, Express, MongoDB</p>
+<p><i class="bi bi-cpu"></i> Python (Data Processing, ML Basics)</p>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<div class="about-box">
+<h5><i class="bi bi-mortarboard"></i> Education</h5>
+<ul>
+<li>BCA (AI) – Jain University (CGPA 7.6)</li>
+<li>XII – 87%</li>
+<li>X – 87.7%</li>
+</ul>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="about-box">
+<h5><i class="bi bi-journal"></i> Courses</h5>
+<ul>
+<li>Advanced HTML & CSS</li>
+<li>Computer Networking</li>
+<li>Python Programming</li>
+<li>Introduction to AI</li>
+<li>Web Development</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section-page">
+<div class="container">
+<h2 class="text-center"><i class="bi bi-folder"></i> Projects</h2>
+
+<div class="row mt-4 g-4">
+
+<div class="col-md-6">
+<div class="card">
+<h4><i class="bi bi-droplet-half"></i> BloodUnity</h4>
+<p>Platform connecting donors and recipients with search and awareness features. Includes filtering by location and group.</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="card">
+<h4><i class="bi bi-wallet2"></i> PrismPay</h4>
+<p>MERN-based finance manager with tracking and alerts. Includes budgeting and secure login system.</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="card">
+<h4><i class="bi bi-person-circle"></i> Portfolio</h4>
+<p>Responsive portfolio with modern UI showcasing projects and skills effectively.</p>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="card">
+<h4><i class="bi bi-cpu"></i> ML Pipeline</h4>
+<p>Python healthcare data processing and ML insights with automated workflow.</p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section-page">
+<div class="container">
+<h2 class="text-center"><i class="bi bi-bar-chart"></i> Skills</h2>
+
+<div class="row mt-4">
+
+<div class="col-md-4">
+<div class="skill-card">
+<h5><i class="bi bi-code-slash"></i> Frontend</h5>
+<p>HTML, CSS, JS, Bootstrap</p>
+<div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="skill-card">
+<h5><i class="bi bi-server"></i> Backend</h5>
+<p>Node.js, Express</p>
+<div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="skill-card">
+<h5><i class="bi bi-database"></i> Database</h5>
+<p>MongoDB, SQL</p>
+<div class="progress"><div class="progress-bar" style="width:75%"></div></div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="skill-card">
+<h5><i class="bi bi-cpu"></i> Programming</h5>
+<p>Python</p>
+<div class="progress"><div class="progress-bar" style="width:75%"></div></div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="skill-card">
+<h5><i class="bi bi-lightbulb"></i> Concepts</h5>
+<p>REST APIs, Authentication, Responsive Design</p>
+<div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- RESUME BUILDER -->
+<div id="resume" class="section-page">
+<div class="container">
+<h2 class="text-center"><i class="bi bi-file-earmark-text"></i> Resume Builder</h2>
+
+<div class="row justify-content-center mt-4">
+<div class="col-md-6">
+<div class="card">
+
+<form onsubmit="generateResume(event)">
+<input type="text" class="form-control mb-3" placeholder="Name" required>
+<input type="text" class="form-control mb-3" placeholder="Skills" required>
+<input type="text" class="form-control mb-3" placeholder="Education" required>
+<textarea class="form-control mb-3" placeholder="Projects"></textarea>
+
+<button class="btn btn-outline-light w-100">
+<i class="bi bi-magic"></i> Generate Resume
+</button>
+</form>
+
+<div id="resumeOutput" class="mt-3"></div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section-page">
+<div class="container text-center">
+<h2><i class="bi bi-envelope"></i> Contact</h2>
+
+<div class="row justify-content-center mt-4">
+<div class="col-md-6">
+<form onsubmit="sendMessage(event)">
+<input type="text" class="form-control mb-3" placeholder="Name" required>
+<input type="email" class="form-control mb-3" placeholder="Email" required>
+<textarea class="form-control mb-3" placeholder="Message" required></textarea>
+<button class="btn btn-outline-light w-100">Send</button>
+</form>
+<p id="msg" class="mt-3"></p>
+</div>
+</div>
+
+<p class="mt-4">devanandasamith@gmail.com | +91 8943247042</p>
+</div>
+</div>
+
+<script>
+function showSection(id){
+ document.querySelectorAll('.section-page').forEach(s=>s.classList.remove('active-section'));
+ document.getElementById(id).classList.add('active-section');
+}
+
+function sendMessage(e){
+ e.preventDefault();
+ document.getElementById('msg').innerText="Message sent!";
+}
+
+function generateResume(e){
+ e.preventDefault();
+ const inputs = document.querySelectorAll('#resume input, #resume textarea');
+ document.getElementById('resumeOutput').innerHTML = `
+ <div class="card">
+   <h4>${inputs[0].value}</h4>
+   <p><b>Education:</b> ${inputs[2].value}</p>
+   <p><b>Skills:</b> ${inputs[1].value}</p>
+   <p><b>Projects:</b> ${inputs[3].value}</p>
+ </div>
+ `;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
